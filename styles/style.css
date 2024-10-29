@@ -41,35 +41,32 @@ ol {
 }
 
 /*styles*/
-.content {/**/
+.content {
   display: flex;
-  width: 100%;
   margin: 0 30px;
+  width: 100%;
   gap: 30px;
 }
 
 /*result*/
-.result {/**/
-  /*display: flex;
-  flex-direction: column;
-  align-items: center;*/
+.result {
   align-items: flex-end;
 }
-.result__video-container {/**/
+.result__video-container {
   position: relative;
-  inline-size: 710px;
   margin-bottom: 10px;
+  inline-size: 710px;
 }
-.result__video {/**/
-  width: 100%;
-  height: 100%;
-  block-size: 100%;
-  object-fit: cover;
+.result__video {
   object-position: center;
+  object-fit: cover;
+  block-size: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 /*visually-hidden*/
-.visually-hidden {/**/
+.visually-hidden {
   position: absolute;
   inline-size: 1px;
   block-size: 1px;
@@ -80,158 +77,159 @@ ol {
 }
 
 /*search*/
-.search-form {/**/
+.search-form {
   display: flex;
   align-items: center;
-  gap: 40px
+  gap: 40px;
 }
-.search-form__fieldset {/**/
+.search-form__fieldset {
   display: flex;
   flex-direction: column;
-  gap: 5px;
   border: none;
-  width: 100%;
   height: 100%;
+  width: 100%;
+  gap: 5px;
 }
-.search-form__fieldset-title {/**/
-  font-size: 18px;
+.search-form__fieldset-title {
   font-weight: 400;
+  font-size: 19px;
 }
 .search-form__label {
   display: flex;
   align-items: center;
-  width: fit-content;
   cursor: pointer;
+  gap: 5px;
 }
 .search-form__label:hover .search-form__label-text {
-  text-decoration: underline;
+  text-decoration: 1px underline #fff;
 }
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
-.search-form__label:has(:focus) {
-  outline: none;
-}
-.search-form__label-text {
-}
 .search-form__textfield {
-  appearance: none;
-  border: 1px solid #fff;
-  background-color: transparent;
-  color: #fff;
   font-family: "Fire Sans Condensed", sans-serif;
-  font-size: 18px;
-  padding: 10px;
-  width: 100%;
+  background-color: transparent;
+  border: 1px solid #fff;
   box-sizing: border-box;
+  border-right: none;
+  border-left: none;
+  appearance: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 3px 0;
+  width: 100%;
+}
+.search-form__textfield:active {
+  outline: 1px solid #fff;
+}
+.search-form__textfield:focus {
+  outline: none;
 }
 .search-form__checkbox-list {
   display: flex;
   gap: 10px;
 }
-.search-form__checkbox-list .search-form__label:has(:focus-visible) {
-  outline: 1px solid #fff;
-  align-items: center;
-  outline-offset: 1px;
-}
-.search-form__checkbox-list
-  input[type="checkbox"]:checked
-  + .search-form__pseudo-checkbox::after {
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  display: flex;
   content: "";
-  width: 12px;
-  height: 12px;
-  background-color: #545050;
-}
-.search-form__checkbox-list
-  input[type="checkbox"]:focus-visible
-  + .search-form__pseudo-checkbox {
-  outline: none;
-  border: 2px solid #545050;
+  flex-direction: column;
+  width: 13px;
+  height: 13px;
+  background-color: #fff;
 }
 .search-form__pseudo-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
   width: 20px;
   height: 20px;
-  border: 2px solid #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
 }
 
 /*content*/
 .content__details {
+  display: flex;
   flex-direction: column;
   position: relative;
-  display: flex;
-  gap: 26px;
   width: 100%;
   height: 100%;
 }
 .title {
-  margin-bottom: 10px;
-  font-size: 36px;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: Oswald, sans-serif;
+  padding-bottom: 15px;
+  font-size: 65px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 65px;
 }
 .content__accent {
   color: #545050;
 }
 .content__list {
   position: relative;
-  overflow: auto;
-  max-height: 300px;
+  overflow-y: scroll;
+  block-size: 300px;
+  scrollbar-width: none;
 }
 
 /*cards*/
 .content__list-item {
   align-items: center;
-  display: flex;
-  margin-bottom: 16px;
 }
 .content__list-item:not(:last-of-type) {
   padding-bottom: 30px;
 }
 .content__card-link {
   display: block;
-  position: relative;
   text-decoration: none;
-  color: #fff;
-  margin: 2px;
+  margin: 4px;
+}
+.content__card-link:hover {
+  text-decoration: underline 1px #fff;
 }
 .content__card-link:active {
   background-color: #545050;
-  text-decoration: none;
+}
+.content__card-link:focus-visible {
+  outline: none;
+}
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+}
+.content__card-link_current {
+  background-color: #545050;
 }
 .content__video-card {
+  display: flex;
   align-items: flex-start;
   flex-direction: row;
-  display: flex;
   width: 100%;
 }
 .content__video-card-description-container {
+  display: flex;
   justify-content: center;
   flex-direction: column;
   overflow: hidden;
-  display: flex;
   flex-basis: 0;
   flex-grow: 1;
 }
 .content__video-card-title {
-  font-family: Oswald, Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   text-overflow: ellipsis;
+  font-family: Oswald, Arial, Helvetica, sans-serif;
   white-space: nowrap;
   overflow: hidden;
   color: #fff;
   max-width: 200px;
   font-weight: 700;
-  font-size: 20px;
   line-height: 1.4;
+  font-size: 20px;
 }
 .content__video-card-description {
-  overflow-wrap: break-word;
   display: -webkit-box;
+  overflow-wrap: break-word;
   overflow: hidden;
   color: #fff;
   -webkit-line-clamp: 4;
@@ -257,28 +255,29 @@ ol {
   text-align: center;
   cursor: pointer;
   color: #fff;
-  line-height: 21.6px;
   min-height: 34px;
-  font-size: 18px;
   font-weight: 700;
-  width: 194px;
+  font-size: 18px;
+  width: 100%;
+  height: 100%;
 }
 button:focus {
   outline: none;
+}
+.button.active {
+  background-color: #545050;
+}
+.button:hover {
+  text-decoration: underline;
 }
 button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
-.button:hover {
-  text-decoration: underline;
-}
-.button.active {
-  background-color: #545050;
-}
 .search-form__submit-button {
   align-items: flex-end;
-  width: 194px;
+  width: 100%;
+  height: 100%;
 }
 .more-button {
   background-color: transparent;
