@@ -212,35 +212,29 @@ ol {
   justify-content: center;
   flex-direction: column;
   overflow: hidden;
-  flex-basis: 0;
   flex-grow: 1;
 }
 .content__video-card-title {
   text-transform: uppercase;
   text-overflow: ellipsis;
-  font-family: Oswald, Arial, Helvetica, sans-serif;
+  font-family: Oswald, sans-serif;
   white-space: nowrap;
   overflow: hidden;
   color: #fff;
+  padding: 2.5px 2.5px 5px;
   max-width: 200px;
   font-weight: 700;
   line-height: 1.4;
-  font-size: 20px;
+  font-size: 25px;
 }
 .content__video-card-description {
-  display: -webkit-box;
-  overflow-wrap: break-word;
-  overflow: hidden;
   color: #fff;
-  -webkit-line-clamp: 4;
-  line-height: 0.9em;
-  inline-size: 200px;
+  padding: 0 2.5px;
   font-weight: 400;
-  block-size: 65px;
-  font-size: 16px;
-  line-height: 1.5;
+  line-height: 16px;
 }
 .content__video-card-thumbnail {
+  object-position: center;
   object-fit: cover;
   flex-shrink: 0;
   height: 103px;
