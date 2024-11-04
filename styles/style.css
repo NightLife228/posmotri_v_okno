@@ -237,6 +237,10 @@ ol {
   font-weight: 700;
   font-size: 30px;
   line-height: 1;
+
+  overflow: hidden; /*исправил*/
+  white-space: nowrap; /*исправил*/
+  text-overflow: ellipsis; /*исправил*/
 }
 
 .content__video-card-description {
@@ -269,7 +273,7 @@ ol {
   inline-size: 100%;
 }
 
-.button.active {
+.button:active {
   background-color: #545050;
 }
 
