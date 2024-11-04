@@ -43,6 +43,7 @@ ol {
 /*styles*/
 .content {
   display: flex;
+  align-items: flex-end;
   inline-size: 100%;
   margin: 0 30px;
   gap: 30px;
@@ -253,7 +254,6 @@ ol {
 .content__video-card-thumbnail {
   object-position: center;
   object-fit: cover;
-  flex-shrink: 0;
   height: 100px;
   width: 200px;
 }
@@ -273,7 +273,7 @@ ol {
   inline-size: 100%;
 }
 
-.button:active {
+.button:active { /*исправил*/
   background-color: #545050;
 }
 
