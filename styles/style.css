@@ -159,7 +159,7 @@ ol {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   width: 20px;
   height: 20px;
 }
@@ -228,26 +228,35 @@ ol {
 .content__video-card {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  padding: 2px;
+}
+
+.content__video-card-description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-grow: 1;
 }
 
 .content__video-card-title {
   font-family: Oswald, sans-serif;
   text-transform: uppercase;
   color: #fff;
-  padding: 2px 2px 5px;
   font-weight: 700;
   font-size: 30px;
   line-height: 1;
 
-  overflow: hidden; /*исправил*/
-  white-space: nowrap; /*исправил*/
-  text-overflow: ellipsis; /*исправил*/
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   max-width: 100%; /*исправил 2*/
 }
 
 .content__video-card-description {
+  font-family: Oswald, sans-serif;
   color: #fff;
-  padding: 0 2px;
   font-weight: 400;
   line-height: 16px;
 }
@@ -274,7 +283,8 @@ ol {
   inline-size: 100%;
 }
 
-.button:active { /*исправил*/
+.button:active {
+  /*исправил*/
   background-color: #545050;
 }
 
