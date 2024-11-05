@@ -51,7 +51,7 @@ ol {
 
 /*result*/
 .result {
-  align-items: flex-end;
+  width: 710px;
 }
 
 .result__video-container {
@@ -61,10 +61,10 @@ ol {
 }
 
 .result__video {
-  object-position: center;
+  cursor: pointer;
   object-fit: cover;
-  block-size: 100%;
-  inline-size: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 /*visually-hidden*/
@@ -81,27 +81,30 @@ ol {
 /*search*/
 .search-form {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: row;
   gap: 40px;
 }
 
 .search-form__fieldset {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
   border: none;
-  inline-size: 100%;
   gap: 5px;
 }
 
 .search-form__fieldset-title {
+  line-height: normal;
+  font-style: normal;
   font-weight: 400;
   font-size: 18px;
 }
 
 .search-form__label {
   display: flex;
-  align-items: center;
-  cursor: pointer;
+  flex-direction: row;
   gap: 5px;
 }
 
@@ -188,15 +191,22 @@ ol {
 }
 
 .content__list {
-  position: relative;
-  overflow-y: scroll;
-  block-size: 298px;
+  display: flex;
+  flex-direction: column;
   scrollbar-width: auto;
+  overflow-y: scroll;
+  position: relative;
+  height: 298px;
+
 }
 
 /*cards*/
+.content__list-item {
+  width: 100%;
+}
+
 .content__list-item:not(:last-of-type) {
-  padding: 0 0 34px;
+  padding: 0 0 30px;
 }
 
 .content__card-link {
@@ -241,7 +251,7 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: Oswald, sans-serif;
+  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   color: #fff;
   font-weight: 700;
@@ -255,17 +265,18 @@ ol {
 }
 
 .content__video-card-description {
-  font-family: Oswald, sans-serif;
+  font-style: normal;
   color: #fff;
-  font-weight: 400;
   line-height: 16px;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .content__video-card-thumbnail {
   object-position: center;
   object-fit: cover;
-  height: 100px;
-  width: 200px;
+  height: 103px;
+  width: 194px;
 }
 
 /*button*/
