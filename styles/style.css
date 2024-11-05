@@ -177,10 +177,10 @@ ol {
   text-transform: uppercase;
   color: #fff;
   font-family: Oswald, sans-serif;
-  padding: 0 0 25px;
-  font-size: 70px;
+  padding: 0 0 26px;
+  font-size: 75px;
   font-weight: 700;
-  line-height: 70px;
+  line-height: 70.5px;
 }
 
 .content__accent {
@@ -190,8 +190,8 @@ ol {
 .content__list {
   position: relative;
   overflow-y: scroll;
-  block-size: 300px;
-  scrollbar-width: none;
+  block-size: 298px;
+  scrollbar-width: auto;
 }
 
 /*cards*/
@@ -242,6 +242,7 @@ ol {
   overflow: hidden; /*исправил*/
   white-space: nowrap; /*исправил*/
   text-overflow: ellipsis; /*исправил*/
+  max-width: 100%; /*исправил 2*/
 }
 
 .content__video-card-description {
