@@ -261,7 +261,7 @@ ol {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  max-width: 100%; /*исправил 2*/
+  max-width: 200px; /*исправил 3*/
 }
 
 .content__video-card-description {
@@ -295,7 +295,6 @@ ol {
 }
 
 .button:active {
-  /*исправил*/
   background-color: #545050;
 }
 
